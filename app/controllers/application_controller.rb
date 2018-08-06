@@ -9,8 +9,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/new' do
-   @recipe = Recipe.new(name: params[:name], ingredients: params[:ingredients], cook_time: params[:cook_time])
-   @recipe.save
+   @recipe = Recipe.create(name: params[:name], ingredients: params[:ingredients], cook_time: params[:cook_time])
    redirect to('/recipes')
   end
 
