@@ -44,8 +44,6 @@ end
     redirect "/recipes/#{@recipe.id}"
   end
 
-  get '/recipes/new' do
-    erb :new
-  end
+
 
 end
